@@ -1,5 +1,5 @@
-#import matplotlib.pyplot as plt
-#import numpy as np
+import matplotlib.pyplot as plt
+import numpy as np
 
 arr1 = []
 arr2 = []
@@ -25,9 +25,15 @@ while prosto(f) == False:
         if f % i == 0:
             suma += i
             print(i, "+", end = " ")
+
     f = suma
     arr1.append(f)
     print("=", f, "]]", end = " ")
 
-#print()
-#print(*arr1)
+l = len(arr1)
+arr2 = [i for i in range(1, l+1)]
+
+
+fig, ax = plt.subplots()             
+ax.plot(arr2, arr1)  
+plt.show()                           
